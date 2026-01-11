@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.learning.kafka</groupId>
-	<artifactId>order-service</artifactId>
+	<artifactId>notification-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>order-service</name>
+	<name>notification-service</name>
 	<description>making first kakfa application</description>
 	<url/>
 	<licenses>
@@ -54,7 +54,6 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
         <dependency>
             <groupId>com.learning.kafka</groupId>
             <artifactId>kafka-common</artifactId>

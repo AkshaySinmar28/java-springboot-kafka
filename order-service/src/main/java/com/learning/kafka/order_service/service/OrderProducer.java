@@ -1,7 +1,7 @@
 package com.learning.kafka.order_service.service;
 
-import com.learning.kafka.order_service.dto.OrderCreateEvent;
+import com.learning.kafka.common.dto.OrderCreatedEvent;
 
 public interface OrderProducer {
-    void publish(OrderCreateEvent orderCreateEvent);
+    void publish(OrderCreatedEvent orderCreateEvent);
 }

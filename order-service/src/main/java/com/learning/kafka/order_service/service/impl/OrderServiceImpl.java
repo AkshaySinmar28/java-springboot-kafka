@@ -1,6 +1,6 @@
 package com.learning.kafka.order_service.service.impl;
 
-import com.learning.kafka.order_service.dto.OrderCreateEvent;
+import com.learning.kafka.common.dto.OrderCreatedEvent;
 import com.learning.kafka.order_service.service.OrderProducer;
 import com.learning.kafka.order_service.service.OrderService;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void orderPublish(OrderCreateEvent orderCreateEvent) {
+    public void orderPublish(OrderCreatedEvent orderCreateEvent) {
         orderProducer.publish(orderCreateEvent);
     }
 }

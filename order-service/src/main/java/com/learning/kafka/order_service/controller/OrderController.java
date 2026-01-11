@@ -1,6 +1,6 @@
 package com.learning.kafka.order_service.controller;
 
-import com.learning.kafka.order_service.dto.OrderCreateEvent;
+import com.learning.kafka.common.dto.OrderCreatedEvent;
 import com.learning.kafka.order_service.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +23,7 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<String> create(@RequestParam double amount) {
-        OrderCreateEvent orderCreateEvent = new OrderCreateEvent(UUID.randomUUID().toString(), "1", amount, LocalDateTime.now());
+        OrderCreatedEvent orderCreateEvent = new OrderCreatedEvent(UUID.randomUUID().toString(), "1", amount, LocalDateTime.now());
         orderService.orderPublish(orderCreateEvent);
         return ResponseEntity.status(HttpStatus.CREATED).body("order created successfully");
     }
